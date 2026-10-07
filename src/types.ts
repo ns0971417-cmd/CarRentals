@@ -1,0 +1,5 @@
+export type Car = { id:string; brand:string; model:string; variant:string|null; year:number|null; category:string|null; fuel_type:string|null; transmission:string|null; seats:number|null; ac:boolean|null; price:number|null; price_unit:string|null; description:string|null; features:string[]|null; availability:boolean; status:string|null; images?:CarImage[] }
+export type CarImage = { id:string; car_id:string; image_url:string; storage_path:string|null }
+export type Booking = { id:string; customer_name:string; phone:string; email:string|null; car_id:string; pickup_date:string; pickup_time:string|null; return_date:string; return_time:string|null; pickup_location:string|null; message:string|null; status:string; created_at:string; cars?:Pick<Car,'brand'|'model'> }
+export type Settings = { id:string; business_name:string; logo_url:string|null; phone:string|null; whatsapp:string|null; email:string|null; address:string|null; city:string|null; maps_url:string|null; opening_hours:string|null; about:string|null; social_links:Record<string,string>|null }
+export type RevenueEntry = { id:string; amount:number; received_on:string; description:string|null; created_at:string }
